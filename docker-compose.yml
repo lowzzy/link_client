@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  front:
+    container_name: link_front
+    build: .
+    ports:
+      - 8080:8080
+    privileged: true
+    volumes:
+      - .:/app:cached
+    tty: true
+    stdin_open: true
+    command: /bin/sh
